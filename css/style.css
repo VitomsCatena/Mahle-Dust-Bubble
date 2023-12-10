@@ -557,3 +557,447 @@ header .container nav ul li a:hover {
 }
 
 /* End About Section  */
+
+/* Start Reviews Section  */
+.reviews {
+    background: url(../img/bg-review.png) no-repeat;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.reviews::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255 255 255 / .7);
+}
+
+.reviews .container h2 {
+    text-align: center;
+    position: relative;
+}
+
+.reviews .container .review-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.reviews .review-box {
+    position: absolute;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    opacity: 0;
+}
+
+.reviews .review-box.inactive {
+    opacity: 1;
+}
+
+.reviews .review-box.active {
+    opacity: 1;
+    position: relative;
+}
+
+.reviews .review-box p {
+    max-width: 67.5rem;
+    margin: 2rem auto;
+}
+
+.reviews .review-box img {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+}
+
+.reviews .review-box .profile-desc {
+    margin-top: 2rem;
+}
+
+.reviews .review-box h5 {
+    font-size: 1.9rem;
+    font-weight: 400;
+    color: var(--goldColor);
+    text-transform: capitalize;
+}
+
+.reviews .review-box span {
+    font-size: 1.6rem;
+    font-weight: 300;
+    color: var(--textColor);
+    text-transform: capitalize;
+}
+
+.reviews .arrow {
+    display: block;
+    position: absolute;
+    font-size: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: .5rem;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.reviews .arrow.left {
+    left: 1rem;
+}
+
+.reviews .arrow.right {
+    right: 1rem;
+}
+
+.reviews .arrow:hover {
+    color: var(--yellowColor);
+}
+
+.reviews .dots {
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    bottom: 2rem;
+    left: 0;
+    display: block;
+    height: 1.2rem;
+    z-index: 2;
+}
+
+.reviews .dots .dot {
+    display: inline-block;
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 50%;
+    border: .1rem solid #000;
+    margin: 0 1rem;
+    cursor: pointer;
+    position: relative;
+}
+
+.reviews .dots .dot.active,
+.reviews .dots .dot:hover {
+    background-color: var(--yellowColor);
+    border-color: var(--yellowColor);
+}
+
+.reviews .dots .dot.active {
+    animation: review-scale .5s ease-in-out forwards;
+}
+
+.reviews .review-box.active img {
+    animation: review-show .5s ease-in-out forwards;
+}
+
+.reviews .review-box.active .profile-desc {
+    animation: review-content-in .4s ease-in-out forwards;
+}
+
+.reviews .review-box.active p {
+    animation: review-content-in .5s ease-in-out forwards;
+}
+
+.reviews .review-box.inactive img {
+    animation: review-hide .5s ease-in-out forwards;
+}
+
+.reviews .review-box.inactive .profile-desc {
+    animation: review-content-out .4s ease-in-out forwards;
+}
+
+.reviews .review-box.inactive p {
+    animation: review-content-out .5s ease-in-out forwards;
+}
+
+@keyframes review-scale {
+    0% {
+        box-shadow: 0px 0px 0px 0px #eee;
+    }
+
+    35% {
+        box-shadow: 0px 0px 10px 5px #eee;
+    }
+
+    70% {
+        box-shadow: 0px 0px 10px 5px var(--goldColor);
+    }
+
+    100% {
+        box-shadow: 0px 0px 0px 0px var(--goldColor);
+    }
+}
+
+@keyframes review-content-in {
+    from {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes review-content-out {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    to {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+}
+
+@keyframes review-show {
+    from {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(1);
+    }
+}
+
+@keyframes review-hide {
+    from {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    to {
+        opacity: 0;
+        transform: scale(0);
+    }
+}
+
+@media(min-width: 768px) {
+    .reviews .arrow {
+        font-size: 2rem;
+    }
+}
+
+/* End Reviews Section  */
+/* Start Pricing Section  */
+.pricing .container {
+    text-align: center;
+}
+
+.pricing .container>p {
+    max-width: 67.4rem;
+    margin: 5rem auto;
+}
+
+.pricing .container .pricing-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(32rem, 100%), 1fr));
+    gap: 7rem;
+}
+
+.pricing .container .pricing-container .price-box {
+    position: relative;
+    background-color: var(--whiteColor);
+    padding: 2.7rem 0;
+    border: .1rem solid #f5f5f5;
+    border-radius: .5rem;
+    cursor: pointer;
+    box-shadow: 0 .2rem .2rem -.1rem rgba(0 0 0 / 30%),
+        .2rem 0 4rem 1rem rgba(0 0 0 / 10%);
+}
+
+.pricing .pricing-container .price-box::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(-45deg, rgba(255 255 255 / 1) 0%, rgba(255 232 36 / 1) 100%);
+}
+
+.pricing .pricing-container .price-box:hover::before {
+    width: 100%;
+    height: 85%;
+}
+
+.pricing .pricing-container .price-box h3 {
+    position: relative;
+    font-size: 2.6rem;
+    color: var(--textColor);
+    text-transform: capitalize;
+    padding-bottom: 2.7rem;
+}
+
+.pricing .pricing-container .price-box .price {
+    position: relative;
+    padding: 2.5rem 0;
+    font-size: 11.9rem;
+    font-weight: 600;
+    color: var(--blueColor);
+    border-top: .1rem solid #f5f5f5;
+    border-bottom: .1rem solid #f5f5f5;
+}
+
+.pricing .pricing-container .price-box .price span {
+    font-size: 2.4rem;
+    color: var(--textColor);
+    position: absolute;
+}
+
+.pricing .pricing-container .price-box .price span:first-child {
+    left: 28%;
+}
+
+.pricing .pricing-container .price-box .price span:nth-child(2) {
+    right: 27%;
+}
+
+.pricing .pricing-container .price-box .price p {
+    font-size: 1.6rem;
+    text-transform: capitalize;
+    margin: 0 auto;
+}
+
+.pricing .pricing-container .price-box p {
+    position: relative;
+    font-size: 1.7rem;
+    color: #000;
+    max-width: 22.6rem;
+    margin: 2.4rem auto;
+}
+
+.pricing .pricing-container .price-box p span {
+    color: var(--blueColor);
+}
+
+@media(min-width: 1200px) {
+    .pricing .container .pricing-container .price-box:nth-child(2) {
+        transform: translateY(1rem) scale(1.1);
+    }
+}
+
+/* End Pricing Section  */
+/* Start News Section  */
+.news .container h2 {
+    text-align: center;
+}
+
+.news .container>p {
+    max-width: 67.4rem;
+    margin: 5rem auto;
+    text-align: center;
+}
+
+.news .container .news-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(30rem, 100%), 1fr));
+    gap: 2.5rem;
+}
+
+.news .container .news-container .new img {
+    width: 100%;
+}
+
+.news .container .news-container .new .new-text {
+    margin-top: 3rem;
+}
+
+.news .news-container .new .new-text h3 {
+    text-transform: capitalize;
+    color: var(--headingColor);
+    font-size: 2.6rem;
+    font-weight: 300;
+    max-width: 35.2rem;
+    min-width: 100%;
+}
+
+.news .news-container .new .new-text p {
+    margin: 2rem 0;
+    max-width: 35.7rem;
+    min-width: 100%;
+}
+
+.news .news-container .new .new-text a {
+    font-weight: 300;
+    font-size: 1.2rem;
+    color: var(--blueColor);
+    text-decoration: underline;
+    text-transform: uppercase;
+}
+
+.news .news-container .new .new-text a:hover {
+    text-decoration: none;
+    transform: scaleX(1.1);
+}
+
+/* End News Section  */
+/* Start Contact Section  */
+.contact .container {
+    text-align: center;
+}
+
+.contact .container p {
+    max-width: 67.3rem;
+    margin: 5rem auto;
+}
+
+.contact .container .contact-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.contact .contact-container .contact-left,
+.contact .contact-container .contact-right {
+    flex: 1 1 45%;
+    padding: 0 2rem;
+}
+
+.contact .contact-container .contact-left form .form-group {
+    margin-bottom: 1.5rem;
+}
+
+.contact .contact-container .contact-left form .form-group input,
+.contact .contact-container .contact-left form .form-group textarea {
+    width: 100%;
+    padding: 1.5rem 1rem;
+    border-radius: .5rem;
+    border: .1rem solid #f0f0f0;
+    font-size: 1.6rem;
+}
+
+.contact .contact-container .contact-left form .form-group textarea {
+    resize: none;
+    min-height: 18rem;
+}
+
+.contact .contact-container .contact-left form .form-group input:focus::placeholder,
+.contact .contact-container .contact-left form .form-group textarea:focus::placeholder {
+    opacity: 0;
+}
+
+.contact .contact-container .contact-left form .form-group button {
+    border: none;
+    cursor: pointer;
+}
+
+@media(min-width: 768px) {
+    .contact .container .contact-container {
+        flex-direction: row;
+    }
+}
+
+/* End of Contact Section */
