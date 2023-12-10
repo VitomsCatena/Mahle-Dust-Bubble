@@ -6,7 +6,8 @@ menuBtn.addEventListener('click', () => {
     menuBtn.classList.toggle('fa-times');
 });
 
-//Review JS Code
+//Review section JS Code
+
 let review = document.querySelector('#review'),
     dots = document.querySelectorAll('#review-dots li'),
     reviewContent = document.querySelectorAll('#review-content .review-box'),
