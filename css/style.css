@@ -136,3 +136,17 @@ section {
     }
 }
 
+
+/* X-Large Screen  */
+@media(min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+/* XX-Large Screen  */
+@media(min-width: 1400px) {
+    .container {
+        width: 1320px;
+    }
+}
