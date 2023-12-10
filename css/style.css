@@ -1001,3 +1001,112 @@ header .container nav ul li a:hover {
 }
 
 /* End of Contact Section */
+
+/* Start Footer Section  */
+footer .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(30rem, 100%), 1fr));
+    gap: 3rem;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    border-top: .1rem solid #d8d8de;
+    border-bottom: .1rem solid #d8d8de;
+}
+
+footer .container .box:first-child {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+footer .container .box img {
+    margin-bottom: 3rem;
+}
+
+footer .container .box h4 {
+    font-size: 2rem;
+    font-weight: 300;
+    color: var(--textColor);
+    text-transform: capitalize;
+    margin-bottom: 1rem;
+}
+
+footer .container .box a:not(.btn),
+footer .container .box span {
+    display: block;
+    font-size: 2rem;
+    font-weight: 300;
+    color: var(--textColor);
+    text-transform: capitalize;
+    margin-bottom: 1rem;
+}
+
+footer .container .box .map {
+    color: var(--blueColor) !important;
+    text-decoration: underline;
+}
+
+footer .container .box .map:hover {
+    text-decoration: none;
+}
+
+footer .container .box .form {
+    display: flex;
+    align-items: center;
+}
+
+footer .container .box input {
+    padding: 1rem 1.1rem;
+    font-size: 1.6rem;
+    border: .1rem solid var(--textColor);
+    border-right: none;
+}
+
+footer .container .box input:focus::placeholder {
+    opacity: 0;
+}
+
+footer .container .box button {
+    background-color: var(--whiteColor);
+    text-transform: capitalize;
+    font-size: 1.6rem;
+    color: var(--textColor);
+    padding: 1rem 1.1rem;
+    border: .1rem solid var(--textColor);
+    border-left: none;
+    cursor: pointer;
+}
+
+footer .container .box .social-media {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    margin-top: 2rem;
+    padding-left: .2rem;
+}
+
+footer .container .box .social-media a:hover i {
+    color: var(--blueColor);
+}
+
+footer .copyright {
+    padding: 3rem 0;
+}
+
+footer .copyright p {
+    text-align: center;
+}
+
+footer .copyright p span {
+    color: var(--blueColor);
+}
+
+@media(min-width: 768px) {
+
+    footer .container .box input,
+    footer .container .box button {
+        padding: 1rem 1.5rem;
+    }
+}
+
+/* End Footer Section  */
