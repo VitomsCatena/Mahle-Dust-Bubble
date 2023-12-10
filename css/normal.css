@@ -2,12 +2,12 @@ html {
     line-height: 1.15; /* 1 */
     -webkit-text-size-adjust: 100%; /* 2 */
   }
-  
+
   /* Sections
    ========================================================================== */
 
 /**
- * Remove the margin in all browsers.
+ * Removes the margin in all browsers.
  */
 
 body {
@@ -15,7 +15,7 @@ body {
   }
   
   /**
-   * Render the `main` element consistently in IE.
+   * Renders the `main` element consistently in IE.
    */
   
   main {
