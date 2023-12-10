@@ -1,30 +1,6 @@
 function showAlert() {
-      alert('Welcome to our website!');
-       // This will show the alert message
-    }
-    function customAlert(alertMessage) {
-  var customAlert = document.getElementById('custom-alert');
-  customAlert.style.display = 'block';
-  customAlert.style.backgroundColor = '#f44336';
-  customAlert.style.color = 'white';
-  customAlert.style.padding = '20px';
-  customAlert.style.borderRadius = '5px';
-  customAlert.style.marginBottom = '15px';
-  customAlert.style.textAlign = 'center';
-  customAlert.style.fontFamily = 'Arial, sans-serif';
-  customAlert.style.fontSize = '18px';
-  customAlert.style.fontWeight = 'bold';
-  customAlert.style.width = '300px';
-  customAlert.style.maxWidth = '100%';
-  customAlert.style.maxHeight = '100%';
-  customAlert.style.overflow = 'auto';
-  customAlert.style.overflowWrap = 'break-word';
-  customAlert.style.wordWrap = 'break-word';
-  customAlert.style.whiteSpace = 'normal';
-  customAlert.style.cursor = 'pointer';
-  customAlert.innerHTML = alertMessage;
+  customAlert('Your custom message goes here');
 }
-
 
 const menuBtn = document.querySelector('.menu-bar');
 const menu = document.querySelector('nav');
