@@ -111,6 +111,7 @@ section {
 }
 
 /* Small Screen  */
+
 @media(min-width: 576px) {
     .container {
         width: 540px;
@@ -118,6 +119,7 @@ section {
 }
 
 /* Medium Screen  */
+
 @media(min-width: 768px) {
     .container {
         width: 750px;
@@ -125,6 +127,7 @@ section {
 }
 
 /* Large Screen  */
+
 @media(min-width: 992px) {
     .container {
         width: 960px;
