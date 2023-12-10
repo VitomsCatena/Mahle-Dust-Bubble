@@ -7,3 +7,104 @@
     outline: none;
     transition: all .3s ease-in-out;
 }
+
+:root {
+    --topHeader: #ecf6fe;
+    --blueColor: #008aff;
+    --yellowColor: #ffe824;
+    --goldColor: #f7b74d;
+    --headingColor: #13287e;
+    --textColor: #474747;
+    --whiteColor: #ffffff;
+}
+
+html {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 62.5%;
+    font-weight: 400;
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    width: 1.6rem;
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--whiteColor);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--blueColor);
+    border-radius: 1rem;
+    border: .3rem solid var(--whiteColor);
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+}
+
+h1,
+h2,
+h3 {
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 3rem;
+    font-weight: 400;
+    color: var(--headingColor);
+}
+
+@media(min-width: 768px) {
+    h2 {
+        font-size: 3.3rem;
+    }
+}
+
+h3 {
+    font-weight: 400;
+}
+
+p {
+    font-size: 1.8rem;
+    font-weight: 300;
+    line-height: 1.6;
+    color: var(--textColor);
+}
+
+@media(min-width: 768px) {
+    p {
+        font-size: 2rem;
+    }
+}
+
+section {
+    padding: 6rem 0;
+}
+
+.btn {
+    background-color: var(--yellowColor);
+    color: var(--textColor);
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    padding: 1.6rem 2rem;
+    border-radius: 2.1rem;
+}
+
+.btn:hover {
+    box-shadow: 0 .5rem .5rem -.4rem rgba(0 0 0 / .5);
+    transform: scale(1.1);
+}
+
+/* Setup Our Container  */
+.container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    margin-left: auto;
+    margin-right: auto;
+}
