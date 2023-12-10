@@ -1,3 +1,8 @@
+function showAlert() {
+      alert('Welcome to our website!');
+       // This will show the alert message
+    }
+
 const menuBtn = document.querySelector('.menu-bar');
 const menu = document.querySelector('nav');
 
