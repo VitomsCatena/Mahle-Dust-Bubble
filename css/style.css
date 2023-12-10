@@ -244,3 +244,83 @@ header .container nav ul li a:hover {
 }
 
 /* End of header section */
+
+/* Start Home Section  */
+.home {
+    background-color: #f4faff;
+    height: 100vh;
+}
+
+.home .container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home .container .home-text {
+    text-align: center;
+}
+
+.home .container .home-text h2 {
+    font-weight: 300;
+    font-size: 2.3rem;
+    color: var(--blueColor);
+}
+
+.home .container .home-text h1 {
+    color: var(--headingColor);
+    font-size: 5.8rem;
+    margin: 3rem 0;
+}
+
+.home .container .home-text p {
+    max-width: 67.3rem;
+    margin-bottom: 4rem;
+}
+
+.home .container .home-img {
+    display: none;
+}
+
+@media(min-width: 768px) {
+    .home .container {
+        justify-content: flex-start;
+    }
+
+    .home .container .home-text {
+        text-align: left;
+    }
+
+    .home .container .home-text h2 {
+        font-size: 3.3rem;
+    }
+
+    .home .container .home-text h1 {
+        font-size: 6.8rem;
+    }
+}
+
+@media(min-width: 992px) {
+    .home .container .home-img {
+        display: flex;
+    }
+
+    .home .container .home-img img {
+        height: 69.7rem;
+    }
+}
+
+@media(min-width: 1024px) {
+    .home {
+        padding-top: 12rem;
+    }
+}
+
+@media(min-width: 1200px) {
+    .home {
+        padding-top: 8rem;
+    }
+}
+
+/* End Home Section  */
