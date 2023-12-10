@@ -10,7 +10,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (empty($name) || empty($email) || empty($subject) || empty($message)) {
         echo "All fields are required.";
     } else {
-        $to = 'your-email@example.com';
+        $to = 'vitomscatenathe1@gmail.com';
         $headers = "From: $email\r\n";
         $headers .= "Reply-To: $email\r\n";
         $headers .= "Content-type: text/html\r\n";
