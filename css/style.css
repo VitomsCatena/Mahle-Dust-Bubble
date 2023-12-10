@@ -101,6 +101,8 @@ section {
     transform: scale(1.1);
 }
 
+/* This is media query section for the container*/
+
 /* Setup Our Container  */
 
 .container {
@@ -133,3 +135,4 @@ section {
         width: 960px;
     }
 }
+
