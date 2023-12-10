@@ -331,9 +331,11 @@ body {
   }
   
   /**
-   * Add the correct display in IE 10.
+   * Adds the correct display in IE 10.
    */
   
   [hidden] {
     display: none;
   }
+
+  /** property of VitomsCatena **/
