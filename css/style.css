@@ -1111,7 +1111,14 @@ footer .copyright p span {
 
 /* End Footer Section  */
 
+/*logo */
+
 .logo img{
     width: 144px;
     height: 94px;
+}
+
+.logo img :hover{
+    width:144px;
+    height: 144px;
 }
