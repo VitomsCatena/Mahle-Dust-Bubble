@@ -1,18 +1,5 @@
- function sendEmail() {
-            Email.send({
-                Host: "smtp.gmail.com",
-                Username: "sender@email_address.com",
-                Password: "Enter your password",
-                To: 'vitomscatenathe1@email_address.com',
-                From: "sender@email_address.com",
-                Subject: "Sending Email using javascript",
-                Body: "Well that was easy!!",
-            })
-                .then(function (message) {
-                    alert("mail sent successfully")
-                });
-        }
-
+ alert("Welcome to Mahle Dust- Bubble ");
+        
 const menuBtn = document.querySelector('.menu-bar');
 const menu = document.querySelector('nav');
 
